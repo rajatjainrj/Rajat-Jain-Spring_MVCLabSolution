@@ -8,7 +8,7 @@ import com.greatlearning.collegefestdebate.model.Student;
 
 @Service
 public interface StudentService {
-	
+
 	List<Student> findAll();
 
 	public Student findById(int id);

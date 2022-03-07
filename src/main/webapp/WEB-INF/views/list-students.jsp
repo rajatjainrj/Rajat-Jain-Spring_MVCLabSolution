@@ -23,10 +23,11 @@
 		<h3>Registered Students for College-Fest Debate</h3>
 		<hr>
 		
-		<a href="/CollegeFestDebate/student/showFormForAddUpdate" class="btn btn-info btn-sm"> Add </a>
+		<center><a href="/CollegeFestDebate/student/showFormForAddUpdate" class="btn btn-primary btn-sm"> Register Student </a></center>
+		<br><br>
 
 		<table class="table table-bordered table-striped">
-			<thead class="thead-dark">
+			<thead class="thead-light">
 				<tr>
 					<th>Student ID</th>
 					<th>Name</th>

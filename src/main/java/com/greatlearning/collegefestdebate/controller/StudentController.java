@@ -39,7 +39,7 @@ public class StudentController {
 	}
 
 	@RequestMapping("/save")
-	public String saveStudent(@ModelAttribute Student student, Model model) {
+	public String saveStudent(@ModelAttribute Student student) {
 		if(student.getId() != null) {
 			Student studentDb = studentService.findById(student.getId());
 			studentDb.setCountry(student.getCountry());

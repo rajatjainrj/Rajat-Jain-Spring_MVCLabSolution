@@ -13,22 +13,20 @@ import com.greatlearning.collegefestdebate.model.Student;
 
 @Repository
 public class StudentServiceImpl implements StudentService {
-	
+
 	private SessionFactory sessionFactory;
 
 	// create session
 	private Session session;
-	
+
 	@Autowired
-	StudentServiceImpl(SessionFactory sessionFactory)
-	{
-		this.sessionFactory=sessionFactory;
+	StudentServiceImpl(SessionFactory sessionFactory) {
+		this.sessionFactory = sessionFactory;
 		try {
 			session = sessionFactory.getCurrentSession();
 		} catch (HibernateException e) {
 			session = sessionFactory.openSession();
 		}
-
 
 	}
 
@@ -51,7 +49,6 @@ public class StudentServiceImpl implements StudentService {
 		// save transaction
 		session.saveOrUpdate(student);
 
-
 		tx.commit();
 	}
 
@@ -60,13 +57,13 @@ public class StudentServiceImpl implements StudentService {
 		Transaction tx = session.beginTransaction();
 
 		// get transaction
-		Student student = session.get(Student.class, id);
+		Student student = findById(id);
 
 		// delete record
 		session.delete(student);
 
 		tx.commit();
-		
+
 	}
 
 }

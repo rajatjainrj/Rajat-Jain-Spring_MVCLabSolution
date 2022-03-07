@@ -5,6 +5,9 @@
 	id="WebApp_ID" version="3.1">
 	<display-name>CollegeFestDebate</display-name>
 	<absolute-ordering />
+	<welcome-file-list>
+		<welcome-file>/WEB-INF/views/student-update-form.jsp</welcome-file>
+	</welcome-file-list>
 	<!-- Spring MVC Configurations -->
 	<!-- Configure Spring MVC Dispatcher Servlet -->
 	<servlet>
